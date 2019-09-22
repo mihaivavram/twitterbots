@@ -27,6 +27,7 @@ object Ingest extends Serializable {
     */
   def getColumns(df: DataFrame): DataFrame = {
     /** Going to concede that there is probably a more idiomatic Spark way to do this. */
+    df.printSchema()
     df
       .select(
         col("created_at").alias("tweet_created_at"),
@@ -38,7 +39,7 @@ object Ingest extends Serializable {
         col("in_reply_to_user_id"),
         col("in_reply_to_screen_name"),
         col("contributors"),
-        col("coordinates.coordinates"),
+        col("place"),
         col("user.id").alias("user_id"),
         col("user.name").alias("user_name"),
         col("user.screen_name").alias("user_screen_name"),
@@ -70,7 +71,6 @@ object Ingest extends Serializable {
         col("retweeted_status.created_at").alias("retweeted_status_tweet_created_at"),
         col("retweeted_status.user.lang").alias("retweeted_status_user_language"),
         col("retweeted_status.entities").alias("retweeeted_status_entities"),
-        col("in_reply_to_status.created_at").alias("replied_status_tweet_created_at"),
         col("retweet_count").alias("tweet_retweet_count"),
         col("favorite_count").alias("tweet_favorite_count"),
         col("entities"),
