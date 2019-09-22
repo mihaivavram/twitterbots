@@ -107,3 +107,9 @@ venv.bak/
 *.rdb
 twitter.db
 .vscode/
+
+# Scala metals server
+.metals
+
+# R language related things
+.Rhistory
