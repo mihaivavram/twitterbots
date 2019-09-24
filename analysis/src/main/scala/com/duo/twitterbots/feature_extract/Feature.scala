@@ -325,11 +325,11 @@ object TweetFeatures {
     Seq("tweet_ts_long", "retweet_ts_long")
   )
 
-  val timeToReply = new ColumnFeature(
-    "time_to_reply",
-    col("tweet_ts_long") - col("reply_ts_long"),
-    Seq("tweet_ts_long", "reply_ts_long")
-  )
+  // val timeToReply = new ColumnFeature(
+  //   "time_to_reply",
+  //   col("tweet_ts_long") - col("reply_ts_long"),
+  //   Seq("tweet_ts_long", "reply_ts_long")
+  // )
 
   val retweetIDDistance = new ColumnFeature(
     "retweet_id_distance",
@@ -355,17 +355,17 @@ object TweetFeatures {
     Seq("tweet_ts")
   )
 
-  val longitude = new ColumnFeature(
-    "longitude",
-    col("coordinates").getItem(0),
-    Seq("coordinates")
-  )
-
-  val latitude = new ColumnFeature(
-    "latitude",
-    col("coordinates").getItem(1),
-    Seq("coordinates")
-  )
+  // val longitude = new ColumnFeature(
+  //   "longitude",
+  //   col("coordinates").getItem(0),
+  //   Seq("coordinates")
+  // )
+  //
+  // val latitude = new ColumnFeature(
+  //   "latitude",
+  //   col("coordinates").getItem(1),
+  //   Seq("coordinates")
+  // )
 
   val numHashtags = new ColumnFeature(
     "num_hashtags",
@@ -385,17 +385,17 @@ object TweetFeatures {
     Seq("entities")
   )
 
-  val previousTweetLatitude = new ColumnFeature(
-    "previous_tweet_latitude",
-    FeatureUtilities.getPreviousTweetInfo("latitude"),
-    Seq("latitude")
-  )
-
-  val previousTweetLongitude = new ColumnFeature(
-    "previous_tweet_longitude",
-    FeatureUtilities.getPreviousTweetInfo("longitude"),
-    Seq("longitude")
-  )
+  // val previousTweetLatitude = new ColumnFeature(
+  //   "previous_tweet_latitude",
+  //   FeatureUtilities.getPreviousTweetInfo("latitude"),
+  //   Seq("latitude")
+  // )
+  //
+  // val dist_from_previous_tweet = new ColumnFeature(
+  //   "previous_tweet_longitude",
+  //   FeatureUtilities.getPreviousTweetInfo("longitude"),
+  //   Seq("longitude")
+  // )
 
   val previousTweetTsLong = new ColumnFeature(
     "previous_tweet_ts_long",
@@ -403,12 +403,12 @@ object TweetFeatures {
     Seq("tweet_ts_long")
   )
 
-  val distFromPreviousTweet = new ColumnFeature(
-    "dist_from_previous_tweet",
-    FeatureUtilities.calculateDistanceUDF(col("latitude"), col("longitude"),
-      col("previous_tweet_latitude"), col("previous_tweet_longitude")),
-    Seq("latitude", "longitude", "previous_tweet_latitude", "previous_tweet_longitude")
-  )
+  // val distFromPreviousTweet = new ColumnFeature(
+  //   "dist_from_previous_tweet",
+  //   FeatureUtilities.calculateDistanceUDF(col("latitude"), col("longitude"),
+  //     col("previous_tweet_latitude"), col("previous_tweet_longitude")),
+  //   Seq("latitude", "longitude", "previous_tweet_latitude", "previous_tweet_longitude")
+  // )
 
   val tweetSource = new ColumnFeature(
     "tweet_source",
@@ -538,9 +538,8 @@ object TweetFeatures {
   )
 
   def columnFeaturesUnknown: Seq[Feature] = columnFeatures ++ Seq(
-    retweetIDDistance, replyTs, replyTsLong, timeToReply,
-    retweetTs, retweetTsLong, timeToRetweet, numHashtags, numUrls, numUsersMentioned,
-    latitude, longitude, previousTweetLatitude, previousTweetLongitude, distFromPreviousTweet)
+    retweetIDDistance, replyTs, replyTsLong,
+    retweetTs, retweetTsLong, timeToRetweet, numHashtags, numUrls, numUsersMentioned)
 
   def transformFeatures: Seq[DataFrame => DataFrame] = {
     Seq(computePercentageRetweets(_), computeHoursTweeted(_), computeAverage("time_from_previous_tweet"),
@@ -558,11 +557,10 @@ object TweetFeatures {
       computeEntityFeatures("urls"), computeEntityFeatures("hashtags"),
       computeEntityFeatures("users_mentioned"),
       computeAverage("reply_id_distance"), computeAverage("retweet_id_distance"),
-      computeAverage("time_to_retweet"), computeAverage("dist_from_previous_tweet"),
+      computeAverage("time_to_retweet"),
       computeGetTotalTweets(_), computeDuplicateText(_),
       getOldestTweetTime(_), computeAverage("previous_tweet_ts_long"),
-      computeDistinctAccountsRetweeted(_), computeAverage("retweet_ts_long"),
-      computeAverage("time_to_reply"))
+      computeDistinctAccountsRetweeted(_), computeAverage("retweet_ts_long"))
   }
 
   def transformColumns: Seq[Column] = Seq(col("num_retweets"), col("perc_retweets"),
@@ -576,8 +574,7 @@ object TweetFeatures {
     col("average_retweet_ts_long")
   )
 
-  def transformColumnsUnknown: Seq[Column] = transformColumns ++ Seq(col("num_languages"),
-    col("avg_time_to_reply"))
+  def transformColumnsUnknown: Seq[Column] = transformColumns ++ Seq(col("num_languages"))
 
   /**
     * Assembles the tweet data and combines it with the account data
