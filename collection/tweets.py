@@ -22,7 +22,7 @@ def get_accounts(session, minimum_tweets=DEFAULT_MINIMUM_TWEETS, limit=100):
         models.Account -- A list containing up to {limit} accounts.
     """
     return session.query(Account).filter(
-        Account.protected == False, Account.language == "en",
+        Account.protected == False, # Account.language == "en", (removing due to Twitter returning null) TODO: must investigate why and how to fix
         Account.fetched_tweets == False,
         Account.tweet_count >= minimum_tweets).order_by(
             Account.found_date.asc()).limit(limit).all()
@@ -36,7 +36,7 @@ def extract_users(tweet):
 
     Keyword Arguments:
         original_user {str} -- The original user ID to exclude (default: {None})
-    
+
     Returns:
         list[str] -- A list of user ID's found in the tweet
     """
