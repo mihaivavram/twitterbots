@@ -2,7 +2,18 @@
 
 This project contains the files used in the Black Hat [_"Don't @ Me: Hunting Twitter Bots at Scale"_](https://duo.com/blog/dont-me-hunting-twitter-bots-at-scale) presentation to discover and aggregate a large sample of Twitter profile and tweet information.
 
-## Setup 
+## Pipeline From Start To Finish
+- Setup framework and all dependencies (python, MySql, Redis, Spark, Scala, sbt, R etc.)
+- Run `collect.py` and `collect_tweets.py` to gather account/tweet data features respectively
+- Unzip the resulting `accounts.json.gz` and `tweets.json.gz` files and run the feature extraction script from where the compiled `twitter-bots.jar` is located:
+```bash
+spark-submit --class ExtractionApp twitter-bots.jar --account-data path/to/accounts.json --tweet-data path/to/tweets.json --destination /path/to/destination/ --extraction-type unknown
+```
+- Launch the `benchmarking.Rmd` and change the top `twitter_data_x` data variables to pull from the output path of the script that ran above which generated the .parquet files. (You may combine and register various datasets here in comparison to each other, but not that this will require changing the benchmarking.Rmd script to also analyze those files)
+- Visualize the results
+
+
+## Setup
 
 ### Account and Tweet Collection
 
@@ -37,6 +48,8 @@ Finally, you'll want to set up a Redis instance for caching. After this is done,
 The code associated with feature extraction utilizes Spark and is written in Scala; therefore, you'll need to install both. Also, if you'd like to run this code outside of an IDE (e.g., IntelliJ or Eclipse), you'll also need to install [sbt](https://www.scala-sbt.org/index.html).
 
 After that initial setup, you should be able to assemble a jar by merely running `assembly` from the sbt interactive shell. The output will be `twitter-bots.jar`.
+
+If running this script on your local machine, you can take the `twitter-bots-example.toml` file and rename it to `twitter-bots.toml` and copy it to your home directory on your machine i.e. `~/`.
 
 ## Usage
 
@@ -111,7 +124,7 @@ The real value is in the [ndjson](http://ndjson.org/) files created. The `collec
 
 ### Feature Extraction
 
-This is the usage for the feature extraction script: 
+This is the usage for the feature extraction script:
 
 ```
 Performs feature extraction on twitter account and tweet data and saves data to local file system or S3.
@@ -127,7 +140,7 @@ Usage: spark-submit --class ExtractionApp twitter-bots.jar --account-data <accou
       --help                     Show help message
 ```
 
-The files that are expected when `--extraction-type unknown` are JSON for both the account and tweet data. When `--extraction-type training`, the file formats expected are csv and parquet respectively. 
+The files that are expected when `--extraction-type unknown` are JSON for both the account and tweet data. When `--extraction-type training`, the file formats expected are csv and parquet respectively.
 
 ### Crawling Social Networks
 
