@@ -33,10 +33,10 @@ sc <- sparklyr::spark_connect(master = "local")
 
 twitter_data_human <- collect(spark_read_parquet(sc, 
                                            "twitter_data_human",
-                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/test2/"))
+                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/test3/"))
 twitter_data_bot <- collect(spark_read_parquet(sc, 
                                            "twitter_data_bot",
-                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/test2/"))
+                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/test3/"))
 twitter_data_human <- as.data.frame(twitter_data_human)
 twitter_data_bot <- as.data.frame(twitter_data_bot)
 ```
@@ -110,6 +110,8 @@ twitter_feature_data_bot <- get_feature_data(twitter_data_bot, T, F)
 
 ```{r}
 twitter_data <- rbind(twitter_feature_data_human, twitter_feature_data_bot)
+print('TWITTER DATA:')
+print(twitter_data)
 # cresci_data <- rbind(genuine_account_feature_data,social_spam_feature_data)
 # genuine_and_eth <- rbind(genuine_account_feature_data, eth_feature_data)
 # cresci_and_eth <- rbind(cresci_data, eth_feature_data)
