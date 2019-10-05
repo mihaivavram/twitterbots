@@ -113,3 +113,6 @@ twitter.db
 
 # R language related things
 .Rhistory
+
+# Default input accounts file
+input-accounts.json

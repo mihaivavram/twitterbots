@@ -56,11 +56,25 @@ If running this script on your local machine, you can take the `twitter-bots-exa
 ### Tweet and Account Collection
 The first iteration of the tool is designed to make it as easy as possible to control what types of account/tweet enumeration you want to do.
 
-At a high level, there are two types of account enumeration:
+At a high level, there are three types of account enumeration:
 
 * `enum` - This process takes `--min-id` and `--max-id` flags and looks up accounts in bulk using Twitter's `users/lookup` API endpoint. If you want a random sampling of accounts between the min and max ID's, you can set the `--enum-percentage` flag.
 
 * `stream` - This process takes a `--stream-query` parameter if you want to filter the Twitter stream by a keyword. If this isn't provided, the sample endpoint will be used.
+
+* `accounts_from_file` - This process takes a JSON file in the root folder of this repo (default called `input-accounts.json`) with the following information format:
+
+```
+{
+	"account_ids":
+	[
+		1,
+		2,
+		<OTHER_IDS>,
+		...,
+	]
+}
+```
 
 This is the usage for the account collection script:
 
@@ -82,6 +96,7 @@ optional arguments:
                         (0-100).
   --no-stream           Disable the streaming
   --no-enum             Disable the account id enumeration
+  --no-accounts-from-file Disable retrieving accounts from file
   --stream-query STREAM_QUERY, -q STREAM_QUERY
                         The query to use when streaming results
   --account-filename ACCOUNT_FILENAME, -af ACCOUNT_FILENAME

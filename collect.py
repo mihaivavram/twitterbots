@@ -68,7 +68,7 @@ def parse_args():
         help='Print JSON to stdout instead of a file',
         default=False)
     parser.add_argument(
-        '--accounts-not-from-file',
+        '--no-accounts-from-file',
         action='store_false',
         dest='accounts_from_file',
         help='Describing whether accounts input will come from a file or not',
