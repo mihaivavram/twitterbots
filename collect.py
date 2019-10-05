@@ -3,6 +3,7 @@ from tweepy import OAuthHandler, API, AppAuthHandler
 
 from collection.accounts_post_2013 import start_streamer, start_lookup
 from collection.accounts_pre_2013 import fetch_accounts, DEFAULT_MAX_ID, DEFAULT_MIN_ID
+from collection.accounts_from_file import fetch_accounts_from_file
 from collection.models import Account
 from manager.streamer import StdoutStreamer, JSONStreamer
 from manager.queue import RedisQueue
@@ -66,6 +67,17 @@ def parse_args():
         dest='stdout',
         help='Print JSON to stdout instead of a file',
         default=False)
+    parser.add_argument(
+        '--accounts-not-from-file',
+        action='store_false',
+        dest='accounts_from_file',
+        help='Describing whether accounts input will come from a file or not',
+        default=True)
+    parser.add_argument(
+        '--account-provision-file',
+        dest='account_provision_file',
+        help='Provide a list of account IDs from a JSON file to work with',
+        default='input-accounts.json')
     return parser.parse_args()
 
 
@@ -129,6 +141,17 @@ def main():
     else:
         logger.info('Skipping enum')
 
+    if args.accounts_from_file:
+        accounts_from_file_process = Process(
+            target=fetch_accounts_from_file,
+            args=[user_api, account_queue],
+            kwargs={
+                'account_provision_file': args.account_provision_file
+            })
+        processes.append(accounts_from_file_process)
+    else:
+        logger.info('Skipping accounts from file')
+
     # if args.tweets:
     #     fetch_tweets_process = Process(
     #         target=fetch_tweets,
@@ -142,9 +165,9 @@ def main():
     # else:
     #     logger.info('Skipping tweets')
 
-    lookup_account_process = Process(
-        target=start_lookup, args=[app_api, lookup_queue, account_queue])
-    processes.append(lookup_account_process)
+    # lookup_account_process = Process(
+    #     target=start_lookup, args=[app_api, lookup_queue, account_queue])
+    # processes.append(lookup_account_process)
 
     for p in processes:
         p.start()
