@@ -1,0 +1,153 @@
+---
+title: "Benchmarking of Duo-Labs Codebase vs. Botometer"
+author: "Mihai Avram"
+date: "10/25/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(caret)
+library(car)
+library(mlr)
+library(ada)
+library(kknn)
+library(randomForest)
+library(e1071)
+library(sparklyr)
+set.seed(26)
+```
+
+```{r}
+spark_install(version = "2.1.0")
+sc <- sparklyr::spark_connect(master = "local")
+```
+
+```{r}
+onur_2017_data_human <- collect(spark_read_parquet(sc,
+                                           "onur_2017_data_human",
+                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/"))
+onur_2017_data_bot <- collect(spark_read_parquet(sc,
+                                           "onur_2017_data_bot",
+                                           "/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/"))
+# Note that kygubrace here stands for the
+# Kentucky gubernatorial election of 11/05/2019
+kygubrace_all_accts <- collect(spark_read_parquet(sc,
+                                           name="kygubrace_all_accts",
+                                           path="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/features/likely-bots/"))
+
+onur_2017_data_human <- as.data.frame(onur_2017_data_human)
+onur_2017_data_bot <- as.data.frame(onur_2017_data_bot)
+kygubrace_all_accts <- as.data.frame(kygubrace_all_accts)
+write.csv(kygubrace_all_accts$user_id_str, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/ids.csv")
+write.csv(kygubrace_all_accts$screen_name, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/screen_names.csv")
+```
+
+```{r}
+# setting target column
+onur_2017_data_human$is_bot <- 0
+onur_2017_data_bot$is_bot <- 1
+kygubrace_all_accts$is_bot <- 1
+```
+
+```{r}
+factor_columns <- c("is_default_profile", "is_protected", "is_geo_enabled", "is_verified", "is_bot")
+add_factors <- function(account_df, columns) {
+  for (c in columns) {
+    account_df[, c] <- as.factor(account_df[, c])
+  }
+  return(account_df)
+}
+
+onur_2017_data_human <- add_factors(onur_2017_data_human, factor_columns)
+onur_2017_data_bot <- add_factors(onur_2017_data_bot, factor_columns)
+kygubrace_all_accts <- add_factors(kygubrace_all_accts, factor_columns)
+```
+
+```{r}
+feature_columns <- c("is_verified", "is_default_profile", "is_geo_enabled",
+                                 "ratio_followers_friends", "screen_name_entropy",
+                                 "numbers_at_beginning_of_screen_name", "numbers_at_end_of_screen_name",
+                                 "favorite_rate", "is_protected",  "tweet_rate", "is_bot")
+
+get_feature_data <- function(account_data, training=T, scale=T){
+  feature_columns <- c("is_verified", "is_default_profile", "is_geo_enabled",
+                                 "ratio_followers_friends", "screen_name_entropy",
+                                 "numbers_at_beginning_of_screen_name", "numbers_at_end_of_screen_name",
+                                 "favorite_rate", "is_protected",  "tweet_rate")
+  if(training){
+    feature_columns <- c(feature_columns, "is_bot")
+  }
+
+  feature_data <- account_data[, feature_columns]
+
+  if(scale){
+    scaled_feature_data <- feature_data
+
+    scaled_feature_data[, -c(1, 2, 3, 9, 11)] <- scale(feature_data[, -c(1, 2, 3, 9, 11)])
+
+    feature_data <- scaled_feature_data
+  }
+
+  return(feature_data)
+}
+
+feature_onur_2017_data_human <- get_feature_data(onur_2017_data_human, T, F)
+print(feature_onur_2017_data_human)
+feature_onur_2017_data_bot <- get_feature_data(onur_2017_data_bot, T, F)
+print(feature_onur_2017_data_bot)
+feature_kygubrace_all_accts <- get_feature_data(kygubrace_all_accts, T, F)
+print(feature_kygubrace_all_accts)
+```
+
+```{r}
+# Adding one human row and one bot row from test set at the end to have factors play nice during training/test for Random Forest
+kygubrace_all_accts <- rbind(feature_kygubrace_all_accts, feature_onur_2017_data_human[0:1,], feature_onur_2017_data_bot[0:1,])
+onur2017selfall <- rbind(feature_onur_2017_data_human, feature_onur_2017_data_bot)
+
+# May be used later
+onur2017human_and_kygubracebots <- rbind(feature_onur_2017_data_human, feature_kygubrace_all_accts)
+onur2017selfall_and_kygubracebots <- rbind(feature_onur_2017_data_human, feature_onur_2017_data_bot, feature_kygubrace_all_accts)
+```
+
+```{r}
+onur_training <- makeClassifTask(id="Onur2017HumansBotsTraining", data=onur2017selfall, target="is_bot", positive="1")
+kygubrace_test <- makeClassifTask(id="KYgubraceBotsTest", data=kygubrace_all_accts, target="is_bot", positive="1")
+
+ada_lrn = makeLearner("classif.ada", id = "ada", predict.type="prob")
+logreg_lrn = makeLearner("classif.logreg", id ="logisticRegression", predict.type="prob")
+dectree_lrn = makeLearner("classif.rpart", id = "rpart", predict.type="prob")
+rndforest_lrn = makeLearner("classif.randomForest", id = "randomForest", predict.type="prob")
+naiveb_lrn = makeLearner("classif.naiveBayes", id = "naiveBayes", predict.type="prob")
+
+ada_mod = train(ada_lrn, task = onur_training)
+ada_pred = predict(ada_mod, task = kygubrace_test)
+ada_pred_df = as.data.frame(ada_pred)
+write.csv(ada_pred_df, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/adaboost_test_result.csv")
+print(ada_pred)
+
+logreg_mod = train(logreg_lrn, task = onur_training)
+logreg_pred = predict(logreg_mod, task = kygubrace_test)
+logreg_pred_df = as.data.frame(logreg_pred)
+write.csv(logreg_pred_df, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/logisticreg_test_result.csv")
+print(logreg_pred)
+
+dectree_mod = train(dectree_lrn, task = onur_training)
+dectree_pred = predict(dectree_mod, task = kygubrace_test)
+dectree_pred_df = as.data.frame(dectree_pred)
+write.csv(dectree_pred_df, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/decisiontree_test_result.csv")
+print(dectree_pred)
+
+rndforest_mod = train(rndforest_lrn, task = onur_training)
+rndforest_pred = predict(rndforest_mod, task = kygubrace_test)
+rndforest_pred_df = as.data.frame(rndforest_pred)
+write.csv(rndforest_pred_df, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/randomforest_test_result.csv")
+print(rndforest_pred)
+
+naiveb_mod = train(naiveb_lrn, task = onur_training)
+naiveb_pred = predict(naiveb_mod, task = kygubrace_test)
+naiveb_pred_df = as.data.frame(naiveb_pred)
+write.csv(naiveb_pred_df, row.names=FALSE, na="", file="/home/mavram/Projects/OpenKasm/TwitterReposAnalysis/KYGubernatorialRace/output/likely-bots/naivebayes_test_result.csv")
+print(naiveb_pred)
+```

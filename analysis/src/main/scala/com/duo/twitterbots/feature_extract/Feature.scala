@@ -123,6 +123,12 @@ object AccountFeatures {
     Seq("id")
   )
 
+  val userIDStr = new ColumnFeature(
+    "user_id_str",
+    col("id_str"),
+    Seq("id_str")
+  )
+
   val createdAtTs = new ColumnFeature(
     "created_at_ts",
     to_timestamp(col("created_at"), "EEE MMMMM dd HH:mm:ss Z yyyyy"),
@@ -254,12 +260,12 @@ object AccountFeatures {
     Seq("timestamp")
   )
 
-  def trainFeatures: Seq[Feature] = Seq(userID, createdAtTs2, updatedAtTs, accountAgeDays2, lang, screenName, defaultProfile,
+  def trainFeatures: Seq[Feature] = Seq(userID, userIDStr, createdAtTs2, updatedAtTs, accountAgeDays2, lang, screenName, defaultProfile,
     verified, geoEnabled, numFollowers, numFriends, numFavorites, ratioFollowersFriends,
     screenNameEntropy, numbersAtBeginning, numbersAtEnd, favoriteRate, numTweets,
     tweetRate, isProtected, listedRate)
 
-  def features: Seq[Feature] = Seq(dumpTs, userID, createdAtTs, accountAgeDays, lang, screenName, defaultProfile,
+  def features: Seq[Feature] = Seq(dumpTs, userID, userIDStr, createdAtTs, accountAgeDays, lang, screenName, defaultProfile,
     verified, geoEnabled, numFollowers, numFriends, numFavorites, ratioFollowersFriends,
     screenNameEntropy, numbersAtBeginning, numbersAtEnd, favoriteRate, numTweets,
     tweetRate, isProtected, listedRate)

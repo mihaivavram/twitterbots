@@ -1,0 +1,1129 @@
+19/10/06 16:27:32 INFO SparkContext: Running Spark version 2.1.0
+19/10/06 16:27:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/10/06 16:27:33 INFO SecurityManager: Changing view acls to: mavram
+19/10/06 16:27:33 INFO SecurityManager: Changing modify acls to: mavram
+19/10/06 16:27:33 INFO SecurityManager: Changing view acls groups to: 
+19/10/06 16:27:33 INFO SecurityManager: Changing modify acls groups to: 
+19/10/06 16:27:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(mavram); groups with view permissions: Set(); users  with modify permissions: Set(mavram); groups with modify permissions: Set()
+19/10/06 16:27:33 INFO Utils: Successfully started service 'sparkDriver' on port 39548.
+19/10/06 16:27:33 INFO SparkEnv: Registering MapOutputTracker
+19/10/06 16:27:33 INFO SparkEnv: Registering BlockManagerMaster
+19/10/06 16:27:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/10/06 16:27:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/10/06 16:27:33 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7efbaed4-6ecd-4c22-a35a-f8637e8fdf06
+19/10/06 16:27:33 INFO MemoryStore: MemoryStore started with capacity 912.3 MB
+19/10/06 16:27:33 INFO SparkEnv: Registering OutputCommitCoordinator
+19/10/06 16:27:33 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/10/06 16:27:33 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+19/10/06 16:27:33 INFO SparkContext: Added JAR file:/home/mavram/R/x86_64-pc-linux-gnu-library/3.6/sparklyr/java/sparklyr-2.0-2.11.jar at spark://127.0.0.1:39548/jars/sparklyr-2.0-2.11.jar with timestamp 1570397253577
+19/10/06 16:27:33 INFO Executor: Starting executor ID driver on host localhost
+19/10/06 16:27:33 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34398.
+19/10/06 16:27:33 INFO NettyBlockTransferService: Server created on 127.0.0.1:34398
+19/10/06 16:27:33 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/10/06 16:27:33 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 34398, None)
+19/10/06 16:27:33 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:34398 with 912.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 34398, None)
+19/10/06 16:27:33 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 34398, None)
+19/10/06 16:27:33 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 34398, None)
+19/10/06 16:27:33 INFO SharedState: Warehouse path is 'file:/home/mavram/Repositories/OpenKasmRepos/duo-labs-twitterbots-repo/spark-warehouse'.
+19/10/06 16:27:33 INFO HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+19/10/06 16:27:34 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+19/10/06 16:27:34 INFO ObjectStore: ObjectStore, initialize called
+19/10/06 16:27:34 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+19/10/06 16:27:34 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+19/10/06 16:27:35 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+19/10/06 16:27:36 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/06 16:27:36 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/06 16:27:36 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/06 16:27:36 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/06 16:27:36 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+19/10/06 16:27:36 INFO ObjectStore: Initialized ObjectStore
+19/10/06 16:27:36 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+19/10/06 16:27:37 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+19/10/06 16:27:37 INFO HiveMetaStore: Added admin role in metastore
+19/10/06 16:27:37 INFO HiveMetaStore: Added public role in metastore
+19/10/06 16:27:37 INFO HiveMetaStore: No user is added in admin role, since config is empty
+19/10/06 16:27:37 INFO HiveMetaStore: 0: get_all_databases
+19/10/06 16:27:37 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_all_databases	
+19/10/06 16:27:37 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+19/10/06 16:27:37 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+19/10/06 16:27:37 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/06 16:27:37 INFO SessionState: Created HDFS directory: /tmp/hive/mavram
+19/10/06 16:27:37 INFO SessionState: Created local directory: /tmp/mavram
+19/10/06 16:27:37 INFO SessionState: Created local directory: /tmp/20ab9dd1-ab24-4916-8cfc-745c8a7a0988_resources
+19/10/06 16:27:37 INFO SessionState: Created HDFS directory: /tmp/hive/mavram/20ab9dd1-ab24-4916-8cfc-745c8a7a0988
+19/10/06 16:27:37 INFO SessionState: Created local directory: /tmp/mavram/20ab9dd1-ab24-4916-8cfc-745c8a7a0988
+19/10/06 16:27:37 INFO SessionState: Created HDFS directory: /tmp/hive/mavram/20ab9dd1-ab24-4916-8cfc-745c8a7a0988/_tmp_space.db
+19/10/06 16:27:37 INFO HiveClientImpl: Warehouse location for Hive client (version 1.2.1) is file:/home/mavram/Repositories/OpenKasmRepos/duo-labs-twitterbots-repo/spark-warehouse
+19/10/06 16:27:37 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:37 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:37 INFO HiveMetaStore: 0: get_database: global_temp
+19/10/06 16:27:37 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: global_temp	
+19/10/06 16:27:37 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+19/10/06 16:27:37 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:27:39 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:39 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:39 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:39 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:39 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:27:39 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:27:39 INFO CodeGenerator: Code generated in 193.729492 ms
+19/10/06 16:27:39 INFO SparkContext: Starting job: collect at utils.scala:44
+19/10/06 16:27:39 INFO DAGScheduler: Got job 0 (collect at utils.scala:44) with 1 output partitions
+19/10/06 16:27:39 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:44)
+19/10/06 16:27:39 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:39 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:39 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[5] at map at utils.scala:41), which has no missing parents
+19/10/06 16:27:39 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 8.7 KB, free 912.3 MB)
+19/10/06 16:27:39 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.6 KB, free 912.3 MB)
+19/10/06 16:27:39 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.0.1:34398 (size: 4.6 KB, free: 912.3 MB)
+19/10/06 16:27:39 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:39 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[5] at map at utils.scala:41)
+19/10/06 16:27:39 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/10/06 16:27:39 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 6041 bytes)
+19/10/06 16:27:39 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/10/06 16:27:39 INFO Executor: Fetching spark://127.0.0.1:39548/jars/sparklyr-2.0-2.11.jar with timestamp 1570397253577
+19/10/06 16:27:39 INFO TransportClientFactory: Successfully created connection to /127.0.0.1:39548 after 12 ms (0 ms spent in bootstraps)
+19/10/06 16:27:39 INFO Utils: Fetching spark://127.0.0.1:39548/jars/sparklyr-2.0-2.11.jar to /tmp/spark-51ed02dd-7068-4e57-9ff0-9456feb18810/userFiles-e40621a8-e875-4e73-b685-4b274872fd85/fetchFileTemp1936416113639967071.tmp
+19/10/06 16:27:39 INFO Executor: Adding file:/tmp/spark-51ed02dd-7068-4e57-9ff0-9456feb18810/userFiles-e40621a8-e875-4e73-b685-4b274872fd85/sparklyr-2.0-2.11.jar to class loader
+19/10/06 16:27:39 INFO CodeGenerator: Code generated in 9.663858 ms
+19/10/06 16:27:39 INFO CodeGenerator: Code generated in 8.819499 ms
+19/10/06 16:27:39 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1318 bytes result sent to driver
+19/10/06 16:27:39 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 181 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:39 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/10/06 16:27:39 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:44) finished in 0.196 s
+19/10/06 16:27:39 INFO DAGScheduler: Job 0 finished: collect at utils.scala:44, took 0.316706 s
+19/10/06 16:27:40 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:40 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+19/10/06 16:27:40 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:40 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:40 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:40 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[7] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 70.8 KB, free 912.2 MB)
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 25.4 KB, free 912.2 MB)
+19/10/06 16:27:40 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.0.1:34398 (size: 25.4 KB, free: 912.3 MB)
+19/10/06 16:27:40 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:40 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at parquet at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:40 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 6273 bytes)
+19/10/06 16:27:40 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+19/10/06 16:27:40 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 4079 bytes result sent to driver
+19/10/06 16:27:40 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 107 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:40 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+19/10/06 16:27:40 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.107 s
+19/10/06 16:27:40 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.120587 s
+19/10/06 16:27:40 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:27:40 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:40 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:40 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:40 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:40 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:27:40 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:27:40 INFO SparkSqlParser: Parsing command: onur_2017_data_human
+19/10/06 16:27:40 INFO SparkSqlParser: Parsing command: CACHE TABLE `onur_2017_data_human`
+19/10/06 16:27:40 INFO SparkSqlParser: Parsing command: `onur_2017_data_human`
+19/10/06 16:27:40 INFO FileSourceStrategy: Pruning directories with: 
+19/10/06 16:27:40 INFO FileSourceStrategy: Post-Scan Filters: 
+19/10/06 16:27:40 INFO FileSourceStrategy: Output Data Schema: struct<user_id: bigint, dump_ts: timestamp, created_at_ts: timestamp, account_age_days: int, lang: string ... 42 more fields>
+19/10/06 16:27:40 INFO FileSourceStrategy: Pushed Filters: 
+19/10/06 16:27:40 INFO CodeGenerator: Code generated in 53.40717 ms
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 307.4 KB, free 911.9 MB)
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 25.9 KB, free 911.9 MB)
+19/10/06 16:27:40 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.0.1:34398 (size: 25.9 KB, free: 912.2 MB)
+19/10/06 16:27:40 INFO SparkContext: Created broadcast 2 from sql at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:40 INFO FileSourceScanExec: Planning scan with bin packing, max size: 105192874 bytes, open cost is considered as scanning 4194304 bytes.
+19/10/06 16:27:40 WARN Utils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.debug.maxToStringFields' in SparkEnv.conf.
+19/10/06 16:27:40 INFO CodeGenerator: Code generated in 9.781477 ms
+19/10/06 16:27:40 INFO CodeGenerator: Code generated in 10.420347 ms
+19/10/06 16:27:40 INFO ContextCleaner: Cleaned accumulator 0
+19/10/06 16:27:40 INFO ContextCleaner: Cleaned accumulator 1
+19/10/06 16:27:40 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 127.0.0.1:34398 in memory (size: 4.6 KB, free: 912.2 MB)
+19/10/06 16:27:40 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 127.0.0.1:34398 in memory (size: 25.4 KB, free: 912.3 MB)
+19/10/06 16:27:40 INFO ContextCleaner: Cleaned accumulator 102
+19/10/06 16:27:40 INFO SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:40 INFO DAGScheduler: Registering RDD 15 (sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:40 INFO DAGScheduler: Got job 2 (sql at NativeMethodAccessorImpl.java:0) with 1 output partitions
+19/10/06 16:27:40 INFO DAGScheduler: Final stage: ResultStage 3 (sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:40 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+19/10/06 16:27:40 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+19/10/06 16:27:40 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[15] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 59.3 KB, free 911.9 MB)
+19/10/06 16:27:40 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 19.0 KB, free 911.9 MB)
+19/10/06 16:27:40 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 127.0.0.1:34398 (size: 19.0 KB, free: 912.3 MB)
+19/10/06 16:27:40 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:40 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[15] at sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:40 INFO TaskSchedulerImpl: Adding task set 2.0 with 8 tasks
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 3, localhost, executor driver, partition 1, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 4, localhost, executor driver, partition 2, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 5, localhost, executor driver, partition 3, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 6, localhost, executor driver, partition 4, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 7, localhost, executor driver, partition 5, PROCESS_LOCAL, 11594 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 8, localhost, executor driver, partition 6, PROCESS_LOCAL, 11798 bytes)
+19/10/06 16:27:40 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 9, localhost, executor driver, partition 7, PROCESS_LOCAL, 11390 bytes)
+19/10/06 16:27:40 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+19/10/06 16:27:40 INFO Executor: Running task 1.0 in stage 2.0 (TID 3)
+19/10/06 16:27:40 INFO Executor: Running task 2.0 in stage 2.0 (TID 4)
+19/10/06 16:27:40 INFO Executor: Running task 3.0 in stage 2.0 (TID 5)
+19/10/06 16:27:40 INFO Executor: Running task 5.0 in stage 2.0 (TID 7)
+19/10/06 16:27:40 INFO Executor: Running task 6.0 in stage 2.0 (TID 8)
+19/10/06 16:27:40 INFO Executor: Running task 7.0 in stage 2.0 (TID 9)
+19/10/06 16:27:40 INFO Executor: Running task 4.0 in stage 2.0 (TID 6)
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00195-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13425, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00110-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12973, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00149-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14054, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00047-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12643, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00139-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14893, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00197-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13801, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00114-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13635, partition values: [empty row]
+19/10/06 16:27:40 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00132-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13215, partition values: [empty row]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00156-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12964, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00140-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12642, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00176-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13424, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00085-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13196, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00088-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14024, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00129-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13635, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00087-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14887, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00182-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13793, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00086-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14004, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00165-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12640, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00035-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13790, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00053-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14798, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00111-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12957, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00033-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13416, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00164-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13627, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00144-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13977, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00000-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13192, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00133-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13780, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00041-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14692, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00090-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13619, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00003-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12942, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00018-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13779, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00077-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13187, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00116-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12636, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00075-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13968, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00025-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13604, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00037-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14578, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00065-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13414, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00008-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12633, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00103-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13593, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00061-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13968, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00027-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12614, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00180-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13587, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00045-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13410, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00122-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12596, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00173-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13182, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00002-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13584, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00093-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13967, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00112-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12939, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00135-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13380, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00162-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12577, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00131-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14560, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00082-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13771, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00038-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12568, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00159-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13370, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00091-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13168, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00123-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13563, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00154-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13758, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00064-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12567, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00137-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13165, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00189-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13751, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00073-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13563, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00070-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12939, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00034-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14508, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00042-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13955, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00152-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12567, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00136-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13148, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00175-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13354, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00044-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13552, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00126-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13743, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00068-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14501, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00019-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12565, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00100-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13142, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00072-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12937, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00141-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13538, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00150-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13139, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00190-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13314, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00171-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13927, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00167-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12936, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00013-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13732, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00108-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12514, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00198-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13536, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00097-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14486, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00076-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12930, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00067-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13312, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00194-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13535, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00117-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13307, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00168-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12510, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00079-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13131, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00083-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14421, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00104-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13732, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00095-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12900, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00007-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13923, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00106-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14407, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00021-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13126, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00074-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13306, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00196-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13917, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00069-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12496, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00170-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12814, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00188-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13509, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00163-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14349, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00174-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12464, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00059-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13118, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00187-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13912, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00010-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13713, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00107-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13296, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00023-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12459, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00184-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14300, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00161-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13113, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00058-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13900, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00020-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13699, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00092-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13099, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00160-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12455, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00039-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13504, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00001-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13286, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00049-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12807, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00056-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12441, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00026-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12431, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00166-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12805, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00014-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13283, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00113-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13887, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00193-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13503, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00055-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13691, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00029-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14297, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00006-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13278, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00115-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12799, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00080-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13886, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00057-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13688, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00125-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13276, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00105-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13885, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00016-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12798, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00130-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14282, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00011-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12348, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00186-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13093, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00158-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13491, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00146-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13688, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00127-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12334, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00134-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13684, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00066-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12793, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00051-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13276, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00005-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13092, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00102-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12779, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00191-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13274, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00043-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13087, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00148-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13490, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00046-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14255, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00063-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13683, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00094-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12761, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00015-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13486, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00062-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13269, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00017-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13877, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00124-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12232, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00118-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14243, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00081-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13682, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00155-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13076, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00036-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13061, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00004-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12714, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00012-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13484, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00031-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13014, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00028-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13672, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00098-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13454, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00024-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13012, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00101-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-11932, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00151-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14233, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00060-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13865, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00040-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12709, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00128-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12995, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00048-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13844, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00181-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13267, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00032-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13671, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00177-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12992, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00084-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13837, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00143-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12977, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00179-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12703, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00030-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13454, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00147-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13232, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00096-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14196, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00153-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13666, partition values: [empty row]
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_7 stored as values in memory (estimated size 25.6 KB, free 911.9 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00071-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13228, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00078-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13450, partition values: [empty row]
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_5 stored as values in memory (estimated size 43.9 KB, free 911.8 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_5 in memory on 127.0.0.1:34398 (size: 43.9 KB, free: 912.2 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00178-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12697, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00022-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13664, partition values: [empty row]
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_7 in memory on 127.0.0.1:34398 (size: 25.6 KB, free: 912.2 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00183-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13834, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00052-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14137, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00138-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13437, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00169-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13659, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00099-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12690, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00185-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13825, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00145-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13645, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00050-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13223, partition values: [empty row]
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_3 stored as values in memory (estimated size 56.3 KB, free 911.8 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_3 in memory on 127.0.0.1:34398 (size: 56.3 KB, free: 912.1 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00199-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14136, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00009-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12676, partition values: [empty row]
+19/10/06 16:27:41 INFO CodeGenerator: Code generated in 5.230249 ms
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00119-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13822, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00192-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13217, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00054-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14083, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00142-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12660, partition values: [empty row]
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_2 stored as values in memory (estimated size 59.8 KB, free 911.7 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_4 stored as values in memory (estimated size 50.6 KB, free 911.7 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00157-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14073, partition values: [empty row]
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_2 in memory on 127.0.0.1:34398 (size: 59.8 KB, free: 912.1 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_4 in memory on 127.0.0.1:34398 (size: 50.6 KB, free: 912.0 MB)
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00089-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14072, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00121-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-12644, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00109-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13817, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00172-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-14071, partition values: [empty row]
+19/10/06 16:27:41 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/humans/part-00120-40f398ba-54ce-4344-bc4d-16bf949b1cc3-c000.snappy.parquet, range: 0-13810, partition values: [empty row]
+19/10/06 16:27:41 INFO CodeGenerator: Code generated in 21.24881 ms
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_6 stored as values in memory (estimated size 36.0 KB, free 911.6 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_6 in memory on 127.0.0.1:34398 (size: 36.0 KB, free: 912.0 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_0 stored as values in memory (estimated size 80.9 KB, free 911.6 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_0 in memory on 127.0.0.1:34398 (size: 80.9 KB, free: 911.9 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block rdd_12_1 stored as values in memory (estimated size 66.8 KB, free 911.5 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added rdd_12_1 in memory on 127.0.0.1:34398 (size: 66.8 KB, free: 911.8 MB)
+19/10/06 16:27:41 INFO Executor: Finished task 7.0 in stage 2.0 (TID 9). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 3.0 in stage 2.0 (TID 5). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 6.0 in stage 2.0 (TID 8). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 1.0 in stage 2.0 (TID 3). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 2.0 in stage 2.0 (TID 4). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 4.0 in stage 2.0 (TID 6). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 5.0 in stage 2.0 (TID 7). 3161 bytes result sent to driver
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 8) in 894 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 4) in 897 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 5) in 896 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 9) in 895 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 3) in 899 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 6) in 897 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 903 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 7) in 898 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+19/10/06 16:27:41 INFO DAGScheduler: ShuffleMapStage 2 (sql at NativeMethodAccessorImpl.java:0) finished in 0.905 s
+19/10/06 16:27:41 INFO DAGScheduler: looking for newly runnable stages
+19/10/06 16:27:41 INFO DAGScheduler: running: Set()
+19/10/06 16:27:41 INFO DAGScheduler: waiting: Set(ResultStage 3)
+19/10/06 16:27:41 INFO DAGScheduler: failed: Set()
+19/10/06 16:27:41 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[18] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 7.0 KB, free 911.5 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.7 KB, free 911.5 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 127.0.0.1:34398 (size: 3.7 KB, free: 911.8 MB)
+19/10/06 16:27:41 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:41 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[18] at sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 10, localhost, executor driver, partition 0, ANY, 5953 bytes)
+19/10/06 16:27:41 INFO Executor: Running task 0.0 in stage 3.0 (TID 10)
+19/10/06 16:27:41 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+19/10/06 16:27:41 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 4 ms
+19/10/06 16:27:41 INFO Executor: Finished task 0.0 in stage 3.0 (TID 10). 2042 bytes result sent to driver
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 10) in 25 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+19/10/06 16:27:41 INFO DAGScheduler: ResultStage 3 (sql at NativeMethodAccessorImpl.java:0) finished in 0.027 s
+19/10/06 16:27:41 INFO DAGScheduler: Job 2 finished: sql at NativeMethodAccessorImpl.java:0, took 0.981603 s
+19/10/06 16:27:41 INFO CodeGenerator: Code generated in 4.457074 ms
+19/10/06 16:27:41 INFO SparkSqlParser: Parsing command: SELECT count(*) FROM `onur_2017_data_human`
+19/10/06 16:27:41 INFO SparkContext: Starting job: collect at utils.scala:204
+19/10/06 16:27:41 INFO DAGScheduler: Registering RDD 22 (collect at utils.scala:204)
+19/10/06 16:27:41 INFO DAGScheduler: Got job 3 (collect at utils.scala:204) with 1 output partitions
+19/10/06 16:27:41 INFO DAGScheduler: Final stage: ResultStage 5 (collect at utils.scala:204)
+19/10/06 16:27:41 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+19/10/06 16:27:41 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 4)
+19/10/06 16:27:41 INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[22] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 59.3 KB, free 911.4 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 19.0 KB, free 911.4 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 127.0.0.1:34398 (size: 19.0 KB, free: 911.8 MB)
+19/10/06 16:27:41 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:41 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[22] at collect at utils.scala:204)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Adding task set 4.0 with 8 tasks
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 11, localhost, executor driver, partition 0, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 12, localhost, executor driver, partition 1, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 13, localhost, executor driver, partition 2, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 14, localhost, executor driver, partition 3, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 15, localhost, executor driver, partition 4, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 16, localhost, executor driver, partition 5, PROCESS_LOCAL, 11586 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 17, localhost, executor driver, partition 6, PROCESS_LOCAL, 11790 bytes)
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 18, localhost, executor driver, partition 7, PROCESS_LOCAL, 11382 bytes)
+19/10/06 16:27:41 INFO Executor: Running task 1.0 in stage 4.0 (TID 12)
+19/10/06 16:27:41 INFO Executor: Running task 2.0 in stage 4.0 (TID 13)
+19/10/06 16:27:41 INFO Executor: Running task 0.0 in stage 4.0 (TID 11)
+19/10/06 16:27:41 INFO Executor: Running task 5.0 in stage 4.0 (TID 16)
+19/10/06 16:27:41 INFO Executor: Running task 4.0 in stage 4.0 (TID 15)
+19/10/06 16:27:41 INFO Executor: Running task 3.0 in stage 4.0 (TID 14)
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_3 locally
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_1 locally
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_4 locally
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_2 locally
+19/10/06 16:27:41 INFO Executor: Finished task 4.0 in stage 4.0 (TID 15). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 2.0 in stage 4.0 (TID 13). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_0 locally
+19/10/06 16:27:41 INFO Executor: Finished task 3.0 in stage 4.0 (TID 14). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 1.0 in stage 4.0 (TID 12). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Running task 7.0 in stage 4.0 (TID 18)
+19/10/06 16:27:41 INFO Executor: Running task 6.0 in stage 4.0 (TID 17)
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_5 locally
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 15) in 13 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 12) in 16 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:41 INFO Executor: Finished task 0.0 in stage 4.0 (TID 11). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO Executor: Finished task 5.0 in stage 4.0 (TID 16). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_7 locally
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 13) in 21 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 14) in 20 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:41 INFO BlockManager: Found block rdd_12_6 locally
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 16) in 20 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 11) in 24 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:41 INFO Executor: Finished task 7.0 in stage 4.0 (TID 18). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 18) in 21 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:41 INFO Executor: Finished task 6.0 in stage 4.0 (TID 17). 2279 bytes result sent to driver
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 17) in 23 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+19/10/06 16:27:41 INFO DAGScheduler: ShuffleMapStage 4 (collect at utils.scala:204) finished in 0.029 s
+19/10/06 16:27:41 INFO DAGScheduler: looking for newly runnable stages
+19/10/06 16:27:41 INFO DAGScheduler: running: Set()
+19/10/06 16:27:41 INFO DAGScheduler: waiting: Set(ResultStage 5)
+19/10/06 16:27:41 INFO DAGScheduler: failed: Set()
+19/10/06 16:27:41 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[25] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 7.0 KB, free 911.4 MB)
+19/10/06 16:27:41 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.7 KB, free 911.4 MB)
+19/10/06 16:27:41 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 127.0.0.1:34398 (size: 3.7 KB, free: 911.8 MB)
+19/10/06 16:27:41 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:41 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[25] at collect at utils.scala:204)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+19/10/06 16:27:41 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 19, localhost, executor driver, partition 0, ANY, 5945 bytes)
+19/10/06 16:27:41 INFO Executor: Running task 0.0 in stage 5.0 (TID 19)
+19/10/06 16:27:41 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+19/10/06 16:27:41 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/10/06 16:27:41 INFO Executor: Finished task 0.0 in stage 5.0 (TID 19). 2042 bytes result sent to driver
+19/10/06 16:27:41 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 19) in 5 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:41 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+19/10/06 16:27:41 INFO DAGScheduler: ResultStage 5 (collect at utils.scala:204) finished in 0.005 s
+19/10/06 16:27:41 INFO DAGScheduler: Job 3 finished: collect at utils.scala:204, took 0.050683 s
+19/10/06 16:27:42 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_human` AS `zzz1`
+WHERE (0 = 1)
+19/10/06 16:27:42 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_human`
+19/10/06 16:27:42 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_human`
+19/10/06 16:27:42 INFO SparkContext: Starting job: collect at utils.scala:204
+19/10/06 16:27:42 INFO DAGScheduler: Got job 4 (collect at utils.scala:204) with 8 output partitions
+19/10/06 16:27:42 INFO DAGScheduler: Final stage: ResultStage 6 (collect at utils.scala:204)
+19/10/06 16:27:42 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:42 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:42 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[27] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:42 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 55.6 KB, free 911.3 MB)
+19/10/06 16:27:42 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 17.1 KB, free 911.3 MB)
+19/10/06 16:27:42 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 127.0.0.1:34398 (size: 17.1 KB, free: 911.8 MB)
+19/10/06 16:27:42 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:42 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 6 (MapPartitionsRDD[27] at collect at utils.scala:204)
+19/10/06 16:27:42 INFO TaskSchedulerImpl: Adding task set 6.0 with 8 tasks
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 20, localhost, executor driver, partition 0, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 21, localhost, executor driver, partition 1, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 22, localhost, executor driver, partition 2, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 23, localhost, executor driver, partition 3, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 24, localhost, executor driver, partition 4, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 25, localhost, executor driver, partition 5, PROCESS_LOCAL, 11597 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 6.0 in stage 6.0 (TID 26, localhost, executor driver, partition 6, PROCESS_LOCAL, 11801 bytes)
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 7.0 in stage 6.0 (TID 27, localhost, executor driver, partition 7, PROCESS_LOCAL, 11393 bytes)
+19/10/06 16:27:42 INFO Executor: Running task 0.0 in stage 6.0 (TID 20)
+19/10/06 16:27:42 INFO Executor: Running task 1.0 in stage 6.0 (TID 21)
+19/10/06 16:27:42 INFO Executor: Running task 3.0 in stage 6.0 (TID 23)
+19/10/06 16:27:42 INFO Executor: Running task 2.0 in stage 6.0 (TID 22)
+19/10/06 16:27:42 INFO Executor: Running task 4.0 in stage 6.0 (TID 24)
+19/10/06 16:27:42 INFO Executor: Running task 7.0 in stage 6.0 (TID 27)
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_0 locally
+19/10/06 16:27:42 INFO Executor: Running task 6.0 in stage 6.0 (TID 26)
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_4 locally
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_7 locally
+19/10/06 16:27:42 INFO Executor: Running task 5.0 in stage 6.0 (TID 25)
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_3 locally
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_6 locally
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_5 locally
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_1 locally
+19/10/06 16:27:42 INFO BlockManager: Found block rdd_12_2 locally
+19/10/06 16:27:42 INFO CodeGenerator: Code generated in 37.275714 ms
+19/10/06 16:27:42 INFO Executor: Finished task 6.0 in stage 6.0 (TID 26). 25300 bytes result sent to driver
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 6.0 in stage 6.0 (TID 26) in 80 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:42 INFO Executor: Finished task 7.0 in stage 6.0 (TID 27). 16791 bytes result sent to driver
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 7.0 in stage 6.0 (TID 27) in 83 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:42 INFO Executor: Finished task 5.0 in stage 6.0 (TID 25). 30545 bytes result sent to driver
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 25) in 87 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:42 INFO Executor: Finished task 3.0 in stage 6.0 (TID 23). 40621 bytes result sent to driver
+19/10/06 16:27:42 INFO Executor: Finished task 4.0 in stage 6.0 (TID 24). 35940 bytes result sent to driver
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 24) in 88 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 23) in 90 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:42 INFO Executor: Finished task 2.0 in stage 6.0 (TID 22). 43622 bytes result sent to driver
+19/10/06 16:27:42 INFO Executor: Finished task 0.0 in stage 6.0 (TID 20). 60284 bytes result sent to driver
+19/10/06 16:27:42 INFO Executor: Finished task 1.0 in stage 6.0 (TID 21). 48547 bytes result sent to driver
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 22) in 91 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 21) in 92 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:42 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 20) in 93 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:42 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+19/10/06 16:27:42 INFO DAGScheduler: ResultStage 6 (collect at utils.scala:204) finished in 0.094 s
+19/10/06 16:27:42 INFO DAGScheduler: Job 4 finished: collect at utils.scala:204, took 0.100235 s
+19/10/06 16:27:42 INFO CodeGenerator: Code generated in 22.178286 ms
+19/10/06 16:27:42 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:27:42 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:42 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:42 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:42 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:42 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:27:42 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:27:42 INFO SparkContext: Starting job: collect at utils.scala:44
+19/10/06 16:27:42 INFO DAGScheduler: Got job 5 (collect at utils.scala:44) with 1 output partitions
+19/10/06 16:27:42 INFO DAGScheduler: Final stage: ResultStage 7 (collect at utils.scala:44)
+19/10/06 16:27:42 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:42 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:42 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[33] at map at utils.scala:41), which has no missing parents
+19/10/06 16:27:42 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 8.7 KB, free 911.3 MB)
+19/10/06 16:27:42 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.6 KB, free 911.3 MB)
+19/10/06 16:27:42 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 127.0.0.1:34398 (size: 4.6 KB, free: 911.8 MB)
+19/10/06 16:27:42 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:42 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[33] at map at utils.scala:41)
+19/10/06 16:27:42 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+19/10/06 16:27:42 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 28, localhost, executor driver, partition 0, PROCESS_LOCAL, 6369 bytes)
+19/10/06 16:27:42 INFO Executor: Running task 0.0 in stage 7.0 (TID 28)
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 7.0 (TID 28). 1254 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 28) in 5 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ResultStage 7 (collect at utils.scala:44) finished in 0.005 s
+19/10/06 16:27:43 INFO DAGScheduler: Job 5 finished: collect at utils.scala:44, took 0.010312 s
+19/10/06 16:27:43 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:43 INFO DAGScheduler: Got job 6 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+19/10/06 16:27:43 INFO DAGScheduler: Final stage: ResultStage 8 (parquet at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:43 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:43 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[35] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 70.8 KB, free 911.2 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 25.4 KB, free 911.2 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 127.0.0.1:34398 (size: 25.4 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[35] at parquet at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 29, localhost, executor driver, partition 0, PROCESS_LOCAL, 6271 bytes)
+19/10/06 16:27:43 INFO Executor: Running task 0.0 in stage 8.0 (TID 29)
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 8.0 (TID 29). 3992 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 29) in 14 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ResultStage 8 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.014 s
+19/10/06 16:27:43 INFO DAGScheduler: Job 6 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.024617 s
+19/10/06 16:27:43 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:27:43 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:43 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:43 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:27:43 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:27:43 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:27:43 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:27:43 INFO CodeGenerator: Code generated in 7.350955 ms
+19/10/06 16:27:43 INFO SparkSqlParser: Parsing command: onur_2017_data_bot
+19/10/06 16:27:43 INFO SparkSqlParser: Parsing command: CACHE TABLE `onur_2017_data_bot`
+19/10/06 16:27:43 INFO SparkSqlParser: Parsing command: `onur_2017_data_bot`
+19/10/06 16:27:43 INFO FileSourceStrategy: Pruning directories with: 
+19/10/06 16:27:43 INFO FileSourceStrategy: Post-Scan Filters: 
+19/10/06 16:27:43 INFO FileSourceStrategy: Output Data Schema: struct<user_id: bigint, dump_ts: timestamp, created_at_ts: timestamp, account_age_days: int, lang: string ... 42 more fields>
+19/10/06 16:27:43 INFO FileSourceStrategy: Pushed Filters: 
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 307.4 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 25.9 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 127.0.0.1:34398 (size: 25.9 KB, free: 911.7 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 10 from sql at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:43 INFO FileSourceScanExec: Planning scan with bin packing, max size: 100438206 bytes, open cost is considered as scanning 4194304 bytes.
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 127.0.0.1:34398 in memory (size: 4.6 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 127.0.0.1:34398 in memory (size: 25.4 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 975
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 127.0.0.1:34398 in memory (size: 19.0 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_6_piece0 on 127.0.0.1:34398 in memory (size: 3.7 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO DAGScheduler: Registering RDD 43 (sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO DAGScheduler: Got job 7 (sql at NativeMethodAccessorImpl.java:0) with 1 output partitions
+19/10/06 16:27:43 INFO DAGScheduler: Final stage: ResultStage 10 (sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+19/10/06 16:27:43 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 9)
+19/10/06 16:27:43 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[43] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_7_piece0 on 127.0.0.1:34398 in memory (size: 17.1 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 873
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 874
+19/10/06 16:27:43 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 127.0.0.1:34398 in memory (size: 3.7 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 379
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 380
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 381
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 382
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 383
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 384
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 385
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 386
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 387
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 388
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 389
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 390
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned accumulator 391
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 59.3 KB, free 911.1 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 19.0 KB, free 911.1 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 127.0.0.1:34398 (size: 19.0 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:43 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[43] at sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Adding task set 9.0 with 8 tasks
+19/10/06 16:27:43 INFO ContextCleaner: Cleaned shuffle 1
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 30, localhost, executor driver, partition 0, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 31, localhost, executor driver, partition 1, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 2.0 in stage 9.0 (TID 32, localhost, executor driver, partition 2, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 3.0 in stage 9.0 (TID 33, localhost, executor driver, partition 3, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 4.0 in stage 9.0 (TID 34, localhost, executor driver, partition 4, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 5.0 in stage 9.0 (TID 35, localhost, executor driver, partition 5, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 6.0 in stage 9.0 (TID 36, localhost, executor driver, partition 6, PROCESS_LOCAL, 11342 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 7.0 in stage 9.0 (TID 37, localhost, executor driver, partition 7, PROCESS_LOCAL, 11140 bytes)
+19/10/06 16:27:43 INFO Executor: Running task 2.0 in stage 9.0 (TID 32)
+19/10/06 16:27:43 INFO Executor: Running task 1.0 in stage 9.0 (TID 31)
+19/10/06 16:27:43 INFO Executor: Running task 4.0 in stage 9.0 (TID 34)
+19/10/06 16:27:43 INFO Executor: Running task 6.0 in stage 9.0 (TID 36)
+19/10/06 16:27:43 INFO Executor: Running task 0.0 in stage 9.0 (TID 30)
+19/10/06 16:27:43 INFO Executor: Running task 5.0 in stage 9.0 (TID 35)
+19/10/06 16:27:43 INFO Executor: Running task 3.0 in stage 9.0 (TID 33)
+19/10/06 16:27:43 INFO Executor: Running task 7.0 in stage 9.0 (TID 37)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00026-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13012, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00142-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12514, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00049-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12865, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00007-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12205, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00094-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12430, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00045-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13764, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00141-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12674, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00178-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12199, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00121-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13011, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00077-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12428, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00177-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12672, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00105-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12501, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00187-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11968, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00166-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12862, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00061-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12193, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00175-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13658, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00104-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12499, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00083-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12190, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00137-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12671, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00110-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12426, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00182-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13000, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00128-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12190, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00095-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12425, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00091-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11950, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00053-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12497, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00042-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12855, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00125-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11950, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00163-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12991, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00018-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12494, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00090-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12188, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00191-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12990, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00122-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13572, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00133-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12187, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00139-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11950, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00079-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12990, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00152-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12664, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00023-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12855, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00114-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12183, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00145-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12978, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00159-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13559, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00116-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12658, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00058-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11942, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00117-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12854, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00198-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12425, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00027-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13545, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00199-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12977, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00000-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12492, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00144-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12843, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00193-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12422, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00136-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12969, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00147-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12838, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00011-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12489, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00155-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12657, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00084-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12421, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00086-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12182, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00069-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11941, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00010-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12960, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00113-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12834, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00103-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12484, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00154-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12654, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00157-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12180, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00151-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13530, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00168-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12960, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00150-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11932, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00065-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12417, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00131-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12651, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00002-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12176, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00181-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12481, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00070-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13323, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00080-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12411, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00032-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12176, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00028-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11923, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00021-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12646, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00013-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12834, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00046-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12957, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00035-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12176, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00140-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12956, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00060-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12171, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00074-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13264, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00115-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12170, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00036-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12406, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00071-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12635, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00017-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12936, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00082-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11923, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00106-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12481, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00149-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12792, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00062-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12170, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00052-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12477, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00172-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13231, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00088-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11905, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00101-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12389, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00047-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12768, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00170-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12477, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00134-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12763, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00119-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12934, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00066-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11902, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00056-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12166, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00025-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12594, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00162-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12476, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00153-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12931, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00188-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11896, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00148-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12379, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00031-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13221, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00038-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12151, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00186-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12576, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00009-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12148, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00130-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12329, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00092-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13191, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00019-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12569, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00072-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12144, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00192-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12561, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00085-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12323, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00001-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12475, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00160-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12135, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00195-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11860, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00055-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12929, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00033-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12081, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00059-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11860, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00124-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12560, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00087-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12754, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00161-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12921, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00014-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11821, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00107-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12068, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00183-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12321, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00005-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12751, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00022-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12472, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00127-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13178, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00029-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12560, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00037-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12739, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00099-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12921, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00189-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12470, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00102-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13159, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00081-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12053, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00004-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12468, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00171-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12737, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00064-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13142, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00132-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12464, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00041-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12558, partition values: [empty row]
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_6 stored as values in memory (estimated size 17.8 KB, free 911.1 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_6 in memory on 127.0.0.1:34398 (size: 17.8 KB, free: 911.8 MB)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00135-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12912, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00167-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13140, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00078-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12461, partition values: [empty row]
+19/10/06 16:27:43 INFO Executor: Finished task 6.0 in stage 9.0 (TID 36). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 6.0 in stage 9.0 (TID 36) in 198 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00126-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12895, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00185-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13140, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00176-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12728, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00190-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12555, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00108-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12315, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00054-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11590, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00048-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12727, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00194-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12305, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00020-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11587, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00156-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13125, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00129-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12305, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00039-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12461, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00076-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13118, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00012-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12291, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00143-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12456, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00097-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13117, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00164-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11527, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00016-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12287, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00073-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12279, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00165-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12724, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00075-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12547, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00138-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12893, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00109-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12446, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00040-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11455, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00158-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12258, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00173-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13110, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00146-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12686, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00008-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12880, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00179-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12683, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00067-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12541, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00174-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12230, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00015-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11455, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00111-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12537, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00051-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12866, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00196-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12442, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00197-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12216, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00169-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12681, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00184-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13091, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00024-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12437, partition values: [empty row]
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_1 stored as values in memory (estimated size 36.1 KB, free 911.0 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_1 in memory on 127.0.0.1:34398 (size: 36.1 KB, free: 911.7 MB)
+19/10/06 16:27:43 INFO Executor: Finished task 1.0 in stage 9.0 (TID 31). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 31) in 305 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00098-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13077, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00068-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12533, partition values: [empty row]
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_5 stored as values in memory (estimated size 21.6 KB, free 911.0 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_4 stored as values in memory (estimated size 23.4 KB, free 911.0 MB)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00050-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13072, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00100-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12519, partition values: [empty row]
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_5 in memory on 127.0.0.1:34398 (size: 21.6 KB, free: 911.7 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_4 in memory on 127.0.0.1:34398 (size: 23.4 KB, free: 911.7 MB)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00030-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-13060, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00123-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-11437, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00096-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12515, partition values: [empty row]
+19/10/06 16:27:43 INFO Executor: Finished task 4.0 in stage 9.0 (TID 34). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_0 stored as values in memory (estimated size 45.5 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO Executor: Finished task 5.0 in stage 9.0 (TID 35). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 4.0 in stage 9.0 (TID 34) in 330 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_0 in memory on 127.0.0.1:34398 (size: 45.5 KB, free: 911.7 MB)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00118-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-10060, partition values: [empty row]
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00034-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12676, partition values: [empty row]
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_3 stored as values in memory (estimated size 26.6 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_3 in memory on 127.0.0.1:34398 (size: 26.6 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 9.0 (TID 30). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 30) in 337 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 5.0 in stage 9.0 (TID 35) in 334 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:43 INFO Executor: Finished task 3.0 in stage 9.0 (TID 33). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00044-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-10033, partition values: [empty row]
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 3.0 in stage 9.0 (TID 33) in 337 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:43 INFO FileScanRDD: Reading File path: file:///home/mavram/Projects/OpenKasm/TwitterReposAnalysis/output-analysis/onur-2017/bots/part-00057-1d3bcd3e-8d4c-45b7-85cb-2ffdcd36b6db-c000.snappy.parquet, range: 0-12674, partition values: [empty row]
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_7 stored as values in memory (estimated size 11.5 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_7 in memory on 127.0.0.1:34398 (size: 11.5 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block rdd_40_2 stored as values in memory (estimated size 31.0 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added rdd_40_2 in memory on 127.0.0.1:34398 (size: 31.0 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO Executor: Finished task 7.0 in stage 9.0 (TID 37). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 7.0 in stage 9.0 (TID 37) in 346 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:43 INFO Executor: Finished task 2.0 in stage 9.0 (TID 32). 3074 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 2.0 in stage 9.0 (TID 32) in 348 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ShuffleMapStage 9 (sql at NativeMethodAccessorImpl.java:0) finished in 0.351 s
+19/10/06 16:27:43 INFO DAGScheduler: looking for newly runnable stages
+19/10/06 16:27:43 INFO DAGScheduler: running: Set()
+19/10/06 16:27:43 INFO DAGScheduler: waiting: Set(ResultStage 10)
+19/10/06 16:27:43 INFO DAGScheduler: failed: Set()
+19/10/06 16:27:43 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[46] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 7.0 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 3.7 KB, free 910.9 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 127.0.0.1:34398 (size: 3.7 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[46] at sql at NativeMethodAccessorImpl.java:0)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 38, localhost, executor driver, partition 0, ANY, 5953 bytes)
+19/10/06 16:27:43 INFO Executor: Running task 0.0 in stage 10.0 (TID 38)
+19/10/06 16:27:43 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+19/10/06 16:27:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 10.0 (TID 38). 2042 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 38) in 6 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ResultStage 10 (sql at NativeMethodAccessorImpl.java:0) finished in 0.006 s
+19/10/06 16:27:43 INFO DAGScheduler: Job 7 finished: sql at NativeMethodAccessorImpl.java:0, took 0.371640 s
+19/10/06 16:27:43 INFO SparkSqlParser: Parsing command: SELECT count(*) FROM `onur_2017_data_bot`
+19/10/06 16:27:43 INFO SparkContext: Starting job: collect at utils.scala:204
+19/10/06 16:27:43 INFO DAGScheduler: Registering RDD 50 (collect at utils.scala:204)
+19/10/06 16:27:43 INFO DAGScheduler: Got job 8 (collect at utils.scala:204) with 1 output partitions
+19/10/06 16:27:43 INFO DAGScheduler: Final stage: ResultStage 12 (collect at utils.scala:204)
+19/10/06 16:27:43 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+19/10/06 16:27:43 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 11)
+19/10/06 16:27:43 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[50] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 59.3 KB, free 910.8 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 19.0 KB, free 910.8 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 127.0.0.1:34398 (size: 19.0 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:43 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[50] at collect at utils.scala:204)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Adding task set 11.0 with 8 tasks
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 39, localhost, executor driver, partition 0, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 40, localhost, executor driver, partition 1, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 2.0 in stage 11.0 (TID 41, localhost, executor driver, partition 2, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 3.0 in stage 11.0 (TID 42, localhost, executor driver, partition 3, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 4.0 in stage 11.0 (TID 43, localhost, executor driver, partition 4, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 5.0 in stage 11.0 (TID 44, localhost, executor driver, partition 5, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 6.0 in stage 11.0 (TID 45, localhost, executor driver, partition 6, PROCESS_LOCAL, 11335 bytes)
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 7.0 in stage 11.0 (TID 46, localhost, executor driver, partition 7, PROCESS_LOCAL, 11133 bytes)
+19/10/06 16:27:43 INFO Executor: Running task 0.0 in stage 11.0 (TID 39)
+19/10/06 16:27:43 INFO Executor: Running task 2.0 in stage 11.0 (TID 41)
+19/10/06 16:27:43 INFO Executor: Running task 6.0 in stage 11.0 (TID 45)
+19/10/06 16:27:43 INFO Executor: Running task 3.0 in stage 11.0 (TID 42)
+19/10/06 16:27:43 INFO Executor: Running task 7.0 in stage 11.0 (TID 46)
+19/10/06 16:27:43 INFO Executor: Running task 1.0 in stage 11.0 (TID 40)
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_3 locally
+19/10/06 16:27:43 INFO Executor: Running task 4.0 in stage 11.0 (TID 43)
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_7 locally
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_1 locally
+19/10/06 16:27:43 INFO Executor: Finished task 3.0 in stage 11.0 (TID 42). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO Executor: Running task 5.0 in stage 11.0 (TID 44)
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 3.0 in stage 11.0 (TID 42) in 12 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_4 locally
+19/10/06 16:27:43 INFO Executor: Finished task 4.0 in stage 11.0 (TID 43). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_2 locally
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 4.0 in stage 11.0 (TID 43) in 14 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:43 INFO Executor: Finished task 7.0 in stage 11.0 (TID 46). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_5 locally
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_6 locally
+19/10/06 16:27:43 INFO Executor: Finished task 2.0 in stage 11.0 (TID 41). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO Executor: Finished task 5.0 in stage 11.0 (TID 44). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO Executor: Finished task 1.0 in stage 11.0 (TID 40). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 7.0 in stage 11.0 (TID 46) in 15 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 5.0 in stage 11.0 (TID 44) in 16 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:43 INFO Executor: Finished task 6.0 in stage 11.0 (TID 45). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 6.0 in stage 11.0 (TID 45) in 17 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 40) in 21 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 2.0 in stage 11.0 (TID 41) in 20 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:43 INFO BlockManager: Found block rdd_40_0 locally
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 11.0 (TID 39). 2279 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 39) in 29 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ShuffleMapStage 11 (collect at utils.scala:204) finished in 0.029 s
+19/10/06 16:27:43 INFO DAGScheduler: looking for newly runnable stages
+19/10/06 16:27:43 INFO DAGScheduler: running: Set()
+19/10/06 16:27:43 INFO DAGScheduler: waiting: Set(ResultStage 12)
+19/10/06 16:27:43 INFO DAGScheduler: failed: Set()
+19/10/06 16:27:43 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[53] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 7.0 KB, free 910.8 MB)
+19/10/06 16:27:43 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.7 KB, free 910.8 MB)
+19/10/06 16:27:43 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 127.0.0.1:34398 (size: 3.7 KB, free: 911.6 MB)
+19/10/06 16:27:43 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[53] at collect at utils.scala:204)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
+19/10/06 16:27:43 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 47, localhost, executor driver, partition 0, ANY, 5946 bytes)
+19/10/06 16:27:43 INFO Executor: Running task 0.0 in stage 12.0 (TID 47)
+19/10/06 16:27:43 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+19/10/06 16:27:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/10/06 16:27:43 INFO Executor: Finished task 0.0 in stage 12.0 (TID 47). 2042 bytes result sent to driver
+19/10/06 16:27:43 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 47) in 6 ms on localhost (executor driver) (1/1)
+19/10/06 16:27:43 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+19/10/06 16:27:43 INFO DAGScheduler: ResultStage 12 (collect at utils.scala:204) finished in 0.007 s
+19/10/06 16:27:43 INFO DAGScheduler: Job 8 finished: collect at utils.scala:204, took 0.048908 s
+19/10/06 16:27:44 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_bot` AS `zzz2`
+WHERE (0 = 1)
+19/10/06 16:27:44 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_bot`
+19/10/06 16:27:44 INFO SparkSqlParser: Parsing command: SELECT *
+FROM `onur_2017_data_bot`
+19/10/06 16:27:44 INFO SparkContext: Starting job: collect at utils.scala:204
+19/10/06 16:27:44 INFO DAGScheduler: Got job 9 (collect at utils.scala:204) with 8 output partitions
+19/10/06 16:27:44 INFO DAGScheduler: Final stage: ResultStage 13 (collect at utils.scala:204)
+19/10/06 16:27:44 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:27:44 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:27:44 INFO DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[55] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:27:44 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 55.6 KB, free 910.7 MB)
+19/10/06 16:27:44 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 17.1 KB, free 910.7 MB)
+19/10/06 16:27:44 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 127.0.0.1:34398 (size: 17.1 KB, free: 911.6 MB)
+19/10/06 16:27:44 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:996
+19/10/06 16:27:44 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 13 (MapPartitionsRDD[55] at collect at utils.scala:204)
+19/10/06 16:27:44 INFO TaskSchedulerImpl: Adding task set 13.0 with 8 tasks
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 48, localhost, executor driver, partition 0, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 49, localhost, executor driver, partition 1, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 2.0 in stage 13.0 (TID 50, localhost, executor driver, partition 2, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 3.0 in stage 13.0 (TID 51, localhost, executor driver, partition 3, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 4.0 in stage 13.0 (TID 52, localhost, executor driver, partition 4, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 5.0 in stage 13.0 (TID 53, localhost, executor driver, partition 5, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 6.0 in stage 13.0 (TID 54, localhost, executor driver, partition 6, PROCESS_LOCAL, 11346 bytes)
+19/10/06 16:27:44 INFO TaskSetManager: Starting task 7.0 in stage 13.0 (TID 55, localhost, executor driver, partition 7, PROCESS_LOCAL, 11144 bytes)
+19/10/06 16:27:44 INFO Executor: Running task 2.0 in stage 13.0 (TID 50)
+19/10/06 16:27:44 INFO Executor: Running task 1.0 in stage 13.0 (TID 49)
+19/10/06 16:27:44 INFO Executor: Running task 4.0 in stage 13.0 (TID 52)
+19/10/06 16:27:44 INFO Executor: Running task 7.0 in stage 13.0 (TID 55)
+19/10/06 16:27:44 INFO Executor: Running task 3.0 in stage 13.0 (TID 51)
+19/10/06 16:27:44 INFO Executor: Running task 6.0 in stage 13.0 (TID 54)
+19/10/06 16:27:44 INFO Executor: Running task 5.0 in stage 13.0 (TID 53)
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_1 locally
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_2 locally
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_4 locally
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_5 locally
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_6 locally
+19/10/06 16:27:44 INFO Executor: Finished task 1.0 in stage 13.0 (TID 49). 23688 bytes result sent to driver
+19/10/06 16:27:44 INFO Executor: Finished task 6.0 in stage 13.0 (TID 54). 10675 bytes result sent to driver
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 6.0 in stage 13.0 (TID 54) in 9 ms on localhost (executor driver) (1/8)
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 49) in 10 ms on localhost (executor driver) (2/8)
+19/10/06 16:27:44 INFO Executor: Finished task 4.0 in stage 13.0 (TID 52). 15038 bytes result sent to driver
+19/10/06 16:27:44 INFO Executor: Finished task 5.0 in stage 13.0 (TID 53). 12866 bytes result sent to driver
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_3 locally
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 4.0 in stage 13.0 (TID 52) in 12 ms on localhost (executor driver) (3/8)
+19/10/06 16:27:44 INFO Executor: Finished task 2.0 in stage 13.0 (TID 50). 19677 bytes result sent to driver
+19/10/06 16:27:44 INFO Executor: Running task 0.0 in stage 13.0 (TID 48)
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 5.0 in stage 13.0 (TID 53) in 13 ms on localhost (executor driver) (4/8)
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 2.0 in stage 13.0 (TID 50) in 14 ms on localhost (executor driver) (5/8)
+19/10/06 16:27:44 INFO Executor: Finished task 3.0 in stage 13.0 (TID 51). 16155 bytes result sent to driver
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 3.0 in stage 13.0 (TID 51) in 15 ms on localhost (executor driver) (6/8)
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_7 locally
+19/10/06 16:27:44 INFO BlockManager: Found block rdd_40_0 locally
+19/10/06 16:27:44 INFO Executor: Finished task 7.0 in stage 13.0 (TID 55). 6304 bytes result sent to driver
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 7.0 in stage 13.0 (TID 55) in 16 ms on localhost (executor driver) (7/8)
+19/10/06 16:27:44 INFO Executor: Finished task 0.0 in stage 13.0 (TID 48). 29140 bytes result sent to driver
+19/10/06 16:27:44 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 48) in 20 ms on localhost (executor driver) (8/8)
+19/10/06 16:27:44 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+19/10/06 16:27:44 INFO DAGScheduler: ResultStage 13 (collect at utils.scala:204) finished in 0.020 s
+19/10/06 16:27:44 INFO DAGScheduler: Job 9 finished: collect at utils.scala:204, took 0.026036 s
+19/10/06 16:28:28 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:28:28 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:28:28 INFO SparkSqlParser: Parsing command: SHOW TABLES
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_database: default
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/06 16:28:28 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+19/10/06 16:28:28 INFO audit: ugi=mavram	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+19/10/06 16:29:42 INFO SparkSqlParser: Parsing command: SELECT * FROM onur_2017_data_bot LIMIT 5
+19/10/06 16:29:42 INFO SparkContext: Starting job: collect at utils.scala:204
+19/10/06 16:29:42 INFO DAGScheduler: Got job 10 (collect at utils.scala:204) with 1 output partitions
+19/10/06 16:29:42 INFO DAGScheduler: Final stage: ResultStage 14 (collect at utils.scala:204)
+19/10/06 16:29:42 INFO DAGScheduler: Parents of final stage: List()
+19/10/06 16:29:42 INFO DAGScheduler: Missing parents: List()
+19/10/06 16:29:42 INFO DAGScheduler: Submitting ResultStage 14 (MapPartitionsRDD[60] at collect at utils.scala:204), which has no missing parents
+19/10/06 16:29:42 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 55.4 KB, free 910.7 MB)
+19/10/06 16:29:42 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 17.0 KB, free 910.6 MB)
+19/10/06 16:29:42 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 127.0.0.1:34398 (size: 17.0 KB, free: 911.5 MB)
+19/10/06 16:29:42 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:996
+19/10/06 16:29:42 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 14 (MapPartitionsRDD[60] at collect at utils.scala:204)
+19/10/06 16:29:42 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks
+19/10/06 16:29:42 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 56, localhost, executor driver, partition 0, PROCESS_LOCAL, 11261 bytes)
+19/10/06 16:29:42 INFO Executor: Running task 0.0 in stage 14.0 (TID 56)
+19/10/06 16:29:42 INFO BlockManager: Found block rdd_40_0 locally
+19/10/06 16:29:42 WARN Executor: 1 block locks were not released by TID = 56:
+[rdd_40_0]
+19/10/06 16:29:42 INFO Executor: Finished task 0.0 in stage 14.0 (TID 56). 2592 bytes result sent to driver
+19/10/06 16:29:42 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 56) in 14 ms on localhost (executor driver) (1/1)
+19/10/06 16:29:42 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+19/10/06 16:29:42 INFO DAGScheduler: ResultStage 14 (collect at utils.scala:204) finished in 0.014 s
+19/10/06 16:29:42 INFO DAGScheduler: Job 10 finished: collect at utils.scala:204, took 0.020412 s
+19/10/06 16:41:13 INFO SparkContext: Invoking stop() from shutdown hook
+19/10/06 16:41:13 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+19/10/06 16:41:13 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/10/06 16:41:13 INFO MemoryStore: MemoryStore cleared
+19/10/06 16:41:13 INFO BlockManager: BlockManager stopped
+19/10/06 16:41:13 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/10/06 16:41:13 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/10/06 16:41:13 INFO SparkContext: Successfully stopped SparkContext
+19/10/06 16:41:13 INFO ShutdownHookManager: Shutdown hook called
+19/10/06 16:41:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-51ed02dd-7068-4e57-9ff0-9456feb18810
