@@ -31,13 +31,15 @@ object FeatureUtilities extends Serializable {
 
   def calculateUsernameEntropy(username: String): Double = {
     var entropy: Double = 0.0
-    val usernameLength: Integer = username.length()
-    val occ: Map[Char, Int] = username.groupBy(c => c).mapValues(str => str.length)
+    try {
+      val usernameLength: Integer = username.length()
+      val occ: Map[Char, Int] = username.groupBy(c => c).mapValues(str => str.length)
 
-    for ((k, v) <- occ) {
-      val p = v.toDouble / usernameLength.toDouble
-      entropy -= p * math.log(p) / math.log(2)
-    }
+      for ((k, v) <- occ) {
+        val p = v.toDouble / usernameLength.toDouble
+        entropy -= p * math.log(p) / math.log(2)
+      }
+    } catch { case _: Throwable => }
 
     entropy
   }
@@ -48,15 +50,17 @@ object FeatureUtilities extends Serializable {
 
   def calculateNumbersAtBeginning(username: String): Integer = {
     var num = 0
-    breakable {
-      for (i <- 0 until username.length) {
-        if (Character.isDigit(username.charAt(i))) {
-          num += 1
-        } else {
-          break
+    try {
+      breakable {
+        for (i <- 0 until username.length) {
+          if (Character.isDigit(username.charAt(i))) {
+            num += 1
+          } else {
+            break
+          }
         }
       }
-    }
+    } catch { case _: Throwable => }
     num
   }
 
